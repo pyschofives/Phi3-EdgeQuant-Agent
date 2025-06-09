@@ -16,7 +16,7 @@ To build a **self-quantizing Phi3 LLM agent** that can:
 
 * ✅ Loads and quantizes Phi-3-mini (3.8B) locally
 * ✅ Structured scripts for inference, quantization, and model loading
-* ✅ Edge-optimized with 8-bit quantization support
+* ✅ Edge-optimized with 4-bit quantization support
 * ✅ Clear directory and modular Python scripts
 * ✅ Clean integration with future AutoGen or RAG-based agents
 
@@ -33,7 +33,7 @@ Phi3-EdgeQuant-Agent/
 │   │   ├── download_phi3_model.py   # Downloads Phi-3-mini to local path
 │   │   └── inference_phi3_local.py # Handles local inference
 │   └── quantization/
-│       └── quantize_phi3_8bit.py   # Quantizes model to 8-bit
+│       └── quantize_phi3_4bit.py   # Quantizes model to 4-bit
 ```
 
 ## 📚 Setup
@@ -62,7 +62,7 @@ python src/model_loader/download_phi3_model.py
 ### 4. Quantize the Model
 
 ```bash
-python src/quantization/quantize_phi3_8bit.py
+python src/quantization/quantize_phi3_4bit.py
 ```
 
 ### 5. Run Inference
