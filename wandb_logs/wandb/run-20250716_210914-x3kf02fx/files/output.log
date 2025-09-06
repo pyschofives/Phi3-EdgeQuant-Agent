@@ -1,0 +1,139 @@
+🔍 Loading 4-bit Quantized Model...
+`flash-attention` package not found, consider installing for better performance: No module named 'flash_attn'.
+Current `flash-attention` does not support `window_size`. Either upgrade or use `attn_implementation='eager'`.
+C:\Users\hilla\AppData\Local\Programs\Python\Python311\Lib\site-packages\transformers\quantizers\auto.py:212: UserWarning: You passed `quantization_config` or equivalent parameters to `from_pretrained` but the model you're loading already has a `quantization_config` attribute. The `quantization_config` from the model will be used.
+  warnings.warn(warning_msg)
+bitsandbytes library load error: Configured CUDA binary not found at D:\bitsandbytes\bitsandbytes\libbitsandbytes_cuda126.dll
+ If you are using Intel CPU/XPU, please install intel_extension_for_pytorch to enable required ops
+Traceback (most recent call last):
+  File "D:\bitsandbytes\bitsandbytes\cextension.py", line 318, in <module>
+    lib = get_native_library()
+          ^^^^^^^^^^^^^^^^^^^^
+  File "D:\bitsandbytes\bitsandbytes\cextension.py", line 282, in get_native_library
+    raise RuntimeError(f"Configured {BNB_BACKEND} binary not found at {cuda_binary_path}")
+RuntimeError: Configured CUDA binary not found at D:\bitsandbytes\bitsandbytes\libbitsandbytes_cuda126.dll
+The `seen_tokens` attribute is deprecated and will be removed in v4.41. Use the `cache_position` model input instead.
+You are not running the flash-attention implementation, expect numerical differences.
+Traceback (most recent call last):
+  File "D:\Phi3-EdgeQuant-Agent\src\quantization\eval_quant_4bit.py", line 29, in <module>
+    outputs = model.generate(**inputs, max_new_tokens=100)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilla\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\utils\_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilla\AppData\Local\Programs\Python\Python311\Lib\site-packages\transformers\generation\utils.py", line 2465, in generate
+    result = self._sample(
+             ^^^^^^^^^^^^^
+  File "C:\Users\hilla\AppData\Local\Programs\Python\Python311\Lib\site-packages\transformers\generation\utils.py", line 3431, in _sample
+    outputs = self(**model_inputs, return_dict=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilla\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilla\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilla\.cache\huggingface\modules\transformers_modules\Phi-3-mini-4k-instruct-4bit\modeling_phi3.py", line 1243, in forward
+    outputs = self.model(
+              ^^^^^^^^^^^
+  File "C:\Users\hilla\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilla\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilla\.cache\huggingface\modules\transformers_modules\Phi-3-mini-4k-instruct-4bit\modeling_phi3.py", line 1121, in forward
+    layer_outputs = decoder_layer(
+                    ^^^^^^^^^^^^^^
+  File "C:\Users\hilla\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilla\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilla\.cache\huggingface\modules\transformers_modules\Phi-3-mini-4k-instruct-4bit\modeling_phi3.py", line 842, in forward
+    attn_outputs, self_attn_weights, present_key_value = self.self_attn(
+                                                         ^^^^^^^^^^^^^^^
+  File "C:\Users\hilla\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilla\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilla\.cache\huggingface\modules\transformers_modules\Phi-3-mini-4k-instruct-4bit\modeling_phi3.py", line 315, in forward
+    qkv = self.qkv_proj(hidden_states)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilla\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilla\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\bitsandbytes\bitsandbytes\nn\modules.py", line 525, in forward
+    return bnb.matmul_4bit(x, weight, bias=bias, quant_state=self.weight.quant_state).to(inp_dtype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\bitsandbytes\bitsandbytes\autograd\_functions.py", line 466, in matmul_4bit
+    return MatMul4Bit.apply(A, B, out, bias, quant_state)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilla\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\autograd\function.py", line 575, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\bitsandbytes\bitsandbytes\autograd\_functions.py", line 380, in forward
+    output = torch.nn.functional.linear(A, F.dequantize_4bit(B, quant_state).to(A.dtype).t(), bias)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\bitsandbytes\bitsandbytes\functional.py", line 983, in dequantize_4bit
+    absmax = dequantize_blockwise(quant_state.absmax, quant_state.state2)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\bitsandbytes\bitsandbytes\functional.py", line 708, in dequantize_blockwise
+    return torch.ops.bitsandbytes.dequantize_blockwise.default(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilla\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 756, in __call__
+    return self._op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilla\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_compile.py", line 51, in inner
+    return disable_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilla\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_dynamo\eval_frame.py", line 838, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilla\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\library.py", line 719, in func_no_dynamo
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\bitsandbytes\bitsandbytes\backends\cuda\ops.py", line 251, in _
+    _dequantize_blockwise_impl(A, absmax, code, blocksize, dtype, out=out)
+  File "D:\bitsandbytes\bitsandbytes\backends\cuda\ops.py", line 299, in _dequantize_blockwise_impl
+    lib.cdequantize_blockwise_fp32(*args)
+  File "D:\bitsandbytes\bitsandbytes\cextension.py", line 263, in throw_on_call
+    raise RuntimeError(f"{self.formatted_error}Native code method attempted to call: lib.{name}()")
+RuntimeError:
+🚨 Forgot to compile the bitsandbytes library? 🚨
+1. You're not using the package but checked-out the source code
+2. You MUST compile from source
+
+Attempted to use bitsandbytes native library functionality but it's not available.
+
+This typically happens when:
+1. bitsandbytes doesn't ship with a pre-compiled binary for your CUDA version
+2. The library wasn't compiled properly during installation from source
+
+To make bitsandbytes work, the compiled library version MUST exactly match the linked CUDA version.
+If your CUDA version doesn't have a pre-compiled binary, you MUST compile from source.
+
+You have two options:
+1. COMPILE FROM SOURCE (required if no binary exists):
+   https://huggingface.co/docs/bitsandbytes/main/en/installation#cuda-compile
+2. Use BNB_CUDA_VERSION to specify a DIFFERENT CUDA version from the detected one, which is installed on your machine and matching an available pre-compiled version listed above
+
+Original error: Configured CUDA binary not found at D:\bitsandbytes\bitsandbytes\libbitsandbytes_cuda126.dll
+
+🔍 Run this command for detailed diagnostics:
+python -m bitsandbytes
+
+If you've tried everything and still have issues:
+1. Include ALL version info (operating system, bitsandbytes, pytorch, cuda, python)
+2. Describe what you've tried in detail
+3. Open an issue with this information:
+   https://github.com/bitsandbytes-foundation/bitsandbytes/issues
+
+Native code method attempted to call: lib.cdequantize_blockwise_fp32()
+[0m

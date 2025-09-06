@@ -1,5 +1,8 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 import torch
+from dotenv import load_dotenv
+load_dotenv()
+
 
 print("🔍 Loading 4-bit Quantized Model...")
 
