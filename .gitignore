@@ -1,6 +1,6 @@
 /models
 wandb_logs
-/outputs
+
 .env
 wandb_autoinit
 __pycache__
