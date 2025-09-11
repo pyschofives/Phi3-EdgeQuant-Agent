@@ -1,0 +1,4 @@
+# Model: Phi-3-mini-4k-instruct-1bit
+# Path: /mnt/d/Phi3-EdgeQuant-Agent/models/quantized/Phi-3-mini-4k-instruct-1bit
+# Timestamp: 2025-09-08T13:12:45.278570Z
+

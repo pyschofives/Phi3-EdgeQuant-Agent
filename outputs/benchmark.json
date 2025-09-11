@@ -1,0 +1,47 @@
+[
+  {
+    "model_name": "Phi-3-mini-4k-instruct-1bit",
+    "path": "D:\\Phi3-EdgeQuant-Agent\\models\\quantized\\Phi-3-mini-4k-instruct-1bit",
+    "timestamp": "2025-09-09T08:47:15.026964Z",
+    "exists": true,
+    "size": "7.12GB",
+    "loader": null,
+    "load_time_s": null,
+    "gen_time_s": null,
+    "gpu_peak_bytes": null,
+    "rss_before_bytes": 18305024,
+    "rss_after_bytes": 295956480,
+    "success": false,
+    "error": "gptqmodel-missing"
+  },
+  {
+    "model_name": "Phi-3-mini-4k-instruct-4bit-gptq",
+    "path": "D:\\Phi3-EdgeQuant-Agent\\models\\quantized\\Phi-3-mini-4k-instruct-4bit-gptq",
+    "timestamp": "2025-09-09T08:47:22.294708Z",
+    "exists": true,
+    "size": "2.13GB",
+    "loader": null,
+    "load_time_s": null,
+    "gen_time_s": null,
+    "gpu_peak_bytes": null,
+    "rss_before_bytes": 295956480,
+    "rss_after_bytes": 303370240,
+    "success": false,
+    "error": "gptqmodel-missing"
+  },
+  {
+    "model_name": "Phi-3-mini-4k-instruct-8bit-gptq",
+    "path": "D:\\Phi3-EdgeQuant-Agent\\models\\quantized\\Phi-3-mini-4k-instruct-8bit-gptq",
+    "timestamp": "2025-09-09T08:47:24.329195Z",
+    "exists": true,
+    "size": "3.75GB",
+    "loader": null,
+    "load_time_s": null,
+    "gen_time_s": null,
+    "gpu_peak_bytes": null,
+    "rss_before_bytes": 303370240,
+    "rss_after_bytes": 302657536,
+    "success": false,
+    "error": "gptqmodel-missing"
+  }
+]

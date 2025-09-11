@@ -1,0 +1,47 @@
+[
+  {
+    "model_name": "Phi-3-mini-4k-instruct-1bit",
+    "path": "D:\\Phi3-EdgeQuant-Agent\\models\\quantized\\Phi-3-mini-4k-instruct-1bit",
+    "timestamp": "2025-09-09T08:48:18.202043Z",
+    "exists": true,
+    "size": "7.12GB",
+    "loader": null,
+    "load_time_s": null,
+    "gen_time_s": null,
+    "gpu_peak_bytes": null,
+    "rss_before_bytes": 23396352,
+    "rss_after_bytes": 296738816,
+    "success": false,
+    "error": "auto-gptq-missing: No module named 'auto_gptq'"
+  },
+  {
+    "model_name": "Phi-3-mini-4k-instruct-4bit-gptq",
+    "path": "D:\\Phi3-EdgeQuant-Agent\\models\\quantized\\Phi-3-mini-4k-instruct-4bit-gptq",
+    "timestamp": "2025-09-09T08:48:22.392622Z",
+    "exists": true,
+    "size": "2.13GB",
+    "loader": null,
+    "load_time_s": null,
+    "gen_time_s": null,
+    "gpu_peak_bytes": null,
+    "rss_before_bytes": 296742912,
+    "rss_after_bytes": 302587904,
+    "success": false,
+    "error": "auto-gptq-missing: No module named 'auto_gptq'"
+  },
+  {
+    "model_name": "Phi-3-mini-4k-instruct-8bit-gptq",
+    "path": "D:\\Phi3-EdgeQuant-Agent\\models\\quantized\\Phi-3-mini-4k-instruct-8bit-gptq",
+    "timestamp": "2025-09-09T08:48:24.440679Z",
+    "exists": true,
+    "size": "3.75GB",
+    "loader": null,
+    "load_time_s": null,
+    "gen_time_s": null,
+    "gpu_peak_bytes": null,
+    "rss_before_bytes": 302587904,
+    "rss_after_bytes": 305766400,
+    "success": false,
+    "error": "auto-gptq-missing: No module named 'auto_gptq'"
+  }
+]

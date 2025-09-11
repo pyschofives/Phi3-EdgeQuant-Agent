@@ -1,0 +1,4 @@
+# model: Phi-3-mini-4k-instruct-4bit-gptq
+# time: 2025-09-08T14:30:01.303451Z
+
+Explain knowledge distillation in AI in simple terms.
